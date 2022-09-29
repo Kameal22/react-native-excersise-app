@@ -13,9 +13,27 @@ export default function App() {
       <StatusBar style="light" />
       <SafeAreaView style={styles.rootContainer}>
         <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen name="Home Page" component={HomeScreen} />
-            <Stack.Screen name="User overview" component={UserOvierview} />
+          <Stack.Navigator
+            screenOptions={{
+              headerStyle: { backgroundColor: "#333533" },
+              headerTintColor: "white",
+              contentStyle: { backgroundColor: "#333533" },
+            }}
+          >
+            <Stack.Screen
+              name="HomePage"
+              options={{
+                title: "Home page",
+              }}
+              component={HomeScreen}
+            />
+            <Stack.Screen
+              name="UserOverview"
+              options={{
+                title: "User",
+              }}
+              component={UserOvierview}
+            />
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaView>
